@@ -1,7 +1,14 @@
-index:
-  title: orlov blog
+head: {
+  title: orlov blog,
+  favicon_emoji: "🗿",
+}
 
 posts: [
-  {title: "RL: solving cartpole ", src: "posts/cartpole_exercise.ipynb", url: "cartpole.html"},
+  {
+    title: "RL: solving cartpole", 
+    src: "posts/cartpole_exercise.ipynb", 
+    url: "cartpole.html",
+    date: "2018-06-18",
+  }
 ]
 

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>{{post.title}}</title>
-</head>
+{% include 'head.j2' %}
 <body>
+    <header>
+        <h1>{{post.title}}</h1>
+        <div>Posted on {{post.date}}</div>
+    </header>
     <frame>
     {{ post.html }}
     </frame>
