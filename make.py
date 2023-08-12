@@ -13,8 +13,8 @@ def render_nb(path):
     return body
 
 def main():
-    for file in os.listdir("generated"):
-        os.remove(os.path.join("generated", file))
+    for file in os.listdir("docs"):
+        os.remove(os.path.join("docs", file))
 
     with open('conf.yaml', 'r') as f:
         ctx = yaml.safe_load(f)
@@ -25,11 +25,11 @@ def main():
         out = post['url']
         post['html'] = render_nb(post['src'])
         
-        with open(f'generated/{out}', 'w') as f:
+        with open(f'docs/{out}', 'w') as f:
             tmpl = env.get_template('post.j2')
             f.write(tmpl.render(**{**ctx, 'post': post}))
 
-    with open('generated/index.html', 'w') as f:
+    with open('docs/index.html', 'w') as f:
         f.write(env.get_template('index.j2').render(**ctx))
 
 if __name__ == "__main__":
