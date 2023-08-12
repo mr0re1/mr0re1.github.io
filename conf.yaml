@@ -1,0 +1,7 @@
+index:
+  title: orlov blog
+
+posts: [
+  {title: "RL: solving cartpole ", src: "posts/cartpole_exercise.ipynb", url: "cartpole.html"},
+]
+
