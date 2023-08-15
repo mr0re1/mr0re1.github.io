@@ -5,10 +5,16 @@ head: {
 
 posts: [
   {
+    title: "TFHE: guide walkthrough. Part 1", 
+    src: "posts/tfhe_p1.ipynb", 
+    url: "tfhe_p1.html",
+    date: "2023-08-15",
+  },
+  {
     title: "RL: solving cartpole", 
     src: "posts/cartpole_exercise.ipynb", 
     url: "cartpole.html",
     date: "2018-06-18",
-  }
+  },
 ]
 
