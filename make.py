@@ -9,6 +9,7 @@ import os
 def render_nb(path):
     notebook = nbformat.read(path, as_version=4)
     html_exporter = HTMLExporter(template_name='classic')
+    html_exporter.exclude_input_prompt = True
     body, _ = html_exporter.from_notebook_node(notebook)
     return body
 

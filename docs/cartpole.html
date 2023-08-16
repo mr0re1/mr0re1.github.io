@@ -13112,8 +13112,7 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Cartpole:-exercise">Cartpole: exercise<a class="anchor-link" href="#Cartpole:-exercise">&#182;</a></h1><p>This my attempt to solve <a href="https://openai.com/requests-for-research/#cartpole">OpenAI. Requests for Research. Cartpole: for newcomers to RL</a>.</p>
 <p><em>No educational/publicistic value is intended, made exclusively for self docmenting and writing exercise.
@@ -13124,7 +13123,7 @@ Nevertheless any feedback is welcome.</em></p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">gym</span>
@@ -13144,7 +13143,7 @@ Nevertheless any feedback is welcome.</em></p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;CartPole-v0&#39;</span><span class="p">)</span>
@@ -13177,8 +13176,7 @@ Nevertheless any feedback is welcome.</em></p>
 </div>
 
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote>
 <p>Start with a simple linear model (that has only four parameters), and use the sign of the weighted sum to choose between the two actions.</p>
@@ -13189,7 +13187,7 @@ Nevertheless any feedback is welcome.</em></p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_linear_model</span><span class="p">(</span><span class="n">weights</span><span class="p">):</span>
@@ -13206,7 +13204,7 @@ Nevertheless any feedback is welcome.</em></p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">evaluate_policy</span><span class="p">(</span><span class="n">policy</span><span class="p">):</span>
@@ -13224,8 +13222,7 @@ Nevertheless any feedback is welcome.</em></p>
 </div>
 
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote>
 <p>The random guessing algorithm: generate 10,000 random configurations of the model's parameters, and pick the one that achieves the best cumulative reward. It is important to choose the distribution over the parameters correctly.</p>
@@ -13236,7 +13233,7 @@ Nevertheless any feedback is welcome.</em></p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Generate random weights (1000 is more than enough) with naive normal distribution.</span>
@@ -13275,16 +13272,14 @@ Nevertheless any feedback is welcome.</em></p>
 </div>
 
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Turns out one can &quot;solve&quot; cartpool with just a handful of random weights.</p>
 
 </div>
 </div>
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote>
 <p>The hill-climbing algorithm: start with a random setting of the parameters, add a small amount of noise to the parameters, and evaluate the new parameter configuration. If it performs better than the old configuration, discard the old configuration and accept the new one. Repeat this process for some number of iterations. How long does it take to achieve perfect performance?</p>
@@ -13295,7 +13290,7 @@ Nevertheless any feedback is welcome.</em></p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">climbing_iterations</span><span class="p">,</span> <span class="n">noise_amplitude</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">0.5</span>
@@ -13354,8 +13349,7 @@ Nevertheless any feedback is welcome.</em></p>
 </div>
 
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote>
 <p>Policy gradient algorithm: here, instead of choosing the action as a deterministic function of the sign of the weighted sum, make it so that action is chosen randomly, but where the distribution over actions (of which there are two) depends on the numerical output of the inner product. Policy gradient prescribes a principled parameter update rule [
@@ -13369,8 +13363,7 @@ Nevertheless any feedback is welcome.</em></p>
 </div>
 </div>
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>My solution is based on <a href="http://www0.cs.ucl.ac.uk/staff/D.Silver/web/Teaching_files/pg.pdf">Lecture 7: Policy Gradient</a>
 from awesome <a href="http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html">UCL Course on RL</a> by David Silver.</p>
@@ -13378,8 +13371,7 @@ from awesome <a href="http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html"
 </div>
 </div>
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Policy">Policy<a class="anchor-link" href="#Policy">&#182;</a></h3><p>We're trying to maximize objective function
 $$
@@ -13404,7 +13396,7 @@ $$</p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Policy</span><span class="p">:</span>
@@ -13424,8 +13416,7 @@ $$</p>
 </div>
 
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Monte-Carlo-policy-gradient">Monte-Carlo policy gradient<a class="anchor-link" href="#Monte-Carlo-policy-gradient">&#182;</a></h3><p>Using $G_t$ as unbiased sample of $Q^{\pi_\theta}(s_t, a_t)$, and learning rate $\alpha$</p>
 <p>$$
@@ -13437,7 +13428,7 @@ $$</p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">run_monte_carlo_policy_gradient_ascent</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span> <span class="n">num_episodes</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">gamma</span><span class="p">):</span>
@@ -13474,7 +13465,7 @@ $$</p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plot_value_and_running_avg</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
@@ -13487,16 +13478,14 @@ $$</p>
 </div>
 
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now we need to implement a policy (<code>probability</code> and <code>score</code> methods).</p>
 
 </div>
 </div>
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Softmax-policy">Softmax policy<a class="anchor-link" href="#Softmax-policy">&#182;</a></h3><p>David's lecture uses softmax as an example. Probabilities of actions are computed as a softmax of weights, where weight is linear combination of stat-action features and policy parameters.</p>
 <p>$$
@@ -13511,8 +13500,7 @@ $$</p>
 </div>
 </div>
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h5 id="State-+-one-hot-encoded-action">State + one-hot encoded action<a class="anchor-link" href="#State-+-one-hot-encoded-action">&#182;</a></h5><p>As an ML-noob my first thougt was &quot;if features convey all available information it should be fine&quot;.</p>
 <p>So I've decided to concatenate four variables of observations with <a href="https://en.wikipedia.org/wiki/One-hot">one-hot</a> encoded action:
@@ -13531,8 +13519,7 @@ $$</p>
 </div>
 </div>
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h5 id="Better-representation:-State-Action-Crossing">Better representation: State-Action Crossing<a class="anchor-link" href="#Better-representation:-State-Action-Crossing">&#182;</a></h5><p>$$
 \phi(s, a_1) = \langle s_1, s_2, s_3, s_4, 0, 0, 0, 0 \rangle \\
@@ -13544,7 +13531,7 @@ $$</p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">StateActionCrossingSoftmaxPolicy</span><span class="p">(</span><span class="n">Policy</span><span class="p">):</span>
@@ -13609,8 +13596,7 @@ $$</p>
 </div>
 
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This way to represent features is equivalent to having a parameters matrix with number of rows
 equal to number of state features and a column for each action.</p>
@@ -13639,7 +13625,7 @@ $$</p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">MatrixSoftmaxPolicy</span><span class="p">(</span><span class="n">Policy</span><span class="p">):</span>    
@@ -13696,8 +13682,7 @@ $$</p>
 </div>
 
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Sigmoid-policy">Sigmoid policy<a class="anchor-link" href="#Sigmoid-policy">&#182;</a></h4><p>Essentially Cartpole policy represents probability of two disjoint outcomes: &quot;apply force -1, otherwise apply force +1&quot;. Therefore it can be represented as $B(s)$ where
 $$
@@ -13736,7 +13721,7 @@ Hope I got it right.</p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">SigmoidPolicy</span><span class="p">(</span><span class="n">Policy</span><span class="p">):</span>
@@ -13797,16 +13782,14 @@ Hope I got it right.</p>
 </div>
 
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>It seems to work.</p>
 
 </div>
 </div>
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Non-linear-policy-with-Tensorflow">Non-linear policy with Tensorflow<a class="anchor-link" href="#Non-linear-policy-with-Tensorflow">&#182;</a></h3>
 </div>
@@ -13814,7 +13797,7 @@ Hope I got it right.</p>
 </div>
 <div  class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
@@ -13937,8 +13920,7 @@ Hope I got it right.</p>
 </div>
 
 </div>
-<div  class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="FIN">FIN<a class="anchor-link" href="#FIN">&#182;</a></h1>
 </div>
