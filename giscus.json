@@ -1,0 +1,11 @@
+{
+    "origins": [
+        "http://www.orlov.love",
+        "https://www.orlov.love", 
+        "http://mr0re1.github.io",
+        "https://mr0re1.github.io"
+    ],
+    "originsRegex": [
+      "http://localhost:[0-9]+"
+    ]
+  }
