@@ -4,7 +4,13 @@
 <body>
     <header>
         <h1>{{post.title}}</h1>
-        <div>Posted on {{post.date}}</div>
+        <div>
+            <span>Posted on {{post.date}}</span>
+            <span>|</span>
+            <span>
+                <a href="{{post.github_link}}">source code</a>
+            </span>
+        </div>
     </header>
     <frame>
     {{ post.html }}

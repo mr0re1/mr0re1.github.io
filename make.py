@@ -6,6 +6,8 @@ import nbformat
 from nbconvert import HTMLExporter
 import os
 
+GITHUB_URL = "https://github.com/mr0re1/mr0re1.github.io"
+
 def render_nb(path):
     notebook = nbformat.read(path, as_version=4)
     html_exporter = HTMLExporter(template_name='classic')
@@ -15,7 +17,8 @@ def render_nb(path):
 
 def main():
     for file in os.listdir("docs"):
-        os.remove(os.path.join("docs", file))
+        if file != "CNAME":
+            os.remove(os.path.join("docs", file))
 
     with open('conf.yaml', 'r') as f:
         ctx = yaml.safe_load(f)
@@ -25,6 +28,7 @@ def main():
     for post in ctx['posts']:
         out = post['url']
         post['html'] = render_nb(post['src'])
+        post['github_link'] = f"{GITHUB_URL}/blob/master/{post['src']}"
         
         with open(f'docs/{out}', 'w') as f:
             tmpl = env.get_template('post.j2')
