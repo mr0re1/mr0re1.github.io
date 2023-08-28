@@ -3,22 +3,24 @@
 import jinja2
 import yaml
 import nbformat
-from nbconvert import HTMLExporter
+from nbconvert import HTMLExporter, TemplateExporter
 import os
 
 GITHUB_URL = "https://github.com/mr0re1/mr0re1.github.io"
 
 def render_nb(path):
     notebook = nbformat.read(path, as_version=4)
-    html_exporter = HTMLExporter(template_name='classic')
+    TemplateExporter.extra_template_basedirs = ['templates']
+    html_exporter = HTMLExporter(template_name='nbconvert_post')
+    
     html_exporter.exclude_input_prompt = True
     body, _ = html_exporter.from_notebook_node(notebook)
     return body
 
 def main():
     for file in os.listdir("docs"):
-        if file != "CNAME":
-            os.remove(os.path.join("docs", file))
+        if file in ["CNAME", "static"]: continue
+        os.remove(os.path.join("docs", file))
 
     with open('conf.yaml', 'r') as f:
         ctx = yaml.safe_load(f)
