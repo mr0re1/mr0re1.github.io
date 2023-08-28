@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 {% include 'head.j2' %}
+
 <body>
-    <header>
+    <div class="container">
+         {% include 'nav.j2' %}
         <h1>{{post.title}}</h1>
         <div>
             <span>Posted on {{post.date}}</span>
@@ -11,26 +13,20 @@
                 <a href="{{post.github_link}}">source code</a>
             </span>
         </div>
-    </header>
-    <frame>
-    {{ post.html }}
-    </frame>
+        <hr>
+        <div>
+        {{ post.html }}
+        </div>
+
+        <div class="giscus-wrap container">
+            <script src="https://giscus.app/client.js" data-repo="mr0re1/mr0re1.github.io"
+                data-repo-id="MDEwOlJlcG9zaXRvcnk0MjE0ODk2Mw==" data-category="Posts discussions"
+                data-category-id="DIC_kwDOAoMkY84CYxFJ" data-mapping="pathname" data-strict="0"
+                data-reactions-enabled="0" data-emit-metadata="0" data-input-position="bottom" data-theme="light"
+                data-lang="en" crossorigin="anonymous" async>
+                </script>
+        </div>
+    </div>
 </body>
-<div class="giscus-wrap container">
-    <script src="https://giscus.app/client.js"
-            data-repo="mr0re1/mr0re1.github.io"
-            data-repo-id="MDEwOlJlcG9zaXRvcnk0MjE0ODk2Mw=="
-            data-category="Posts discussions"
-            data-category-id="DIC_kwDOAoMkY84CYxFJ"
-            data-mapping="pathname"
-            data-strict="0"
-            data-reactions-enabled="0"
-            data-emit-metadata="0"
-            data-input-position="bottom"
-            data-theme="light"
-            data-lang="en"
-            crossorigin="anonymous"
-            async>
-    </script>
-</div>
+
 </html>
