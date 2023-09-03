@@ -36,8 +36,10 @@ def main():
             tmpl = env.get_template('post.j2')
             f.write(tmpl.render(**{**ctx, 'post': post}))
 
-    with open('docs/index.html', 'w') as f:
-        f.write(env.get_template('index.j2').render(**ctx))
+    for p in ["index"]:
+        with open(f'docs/{p}.html', 'w') as f:
+            f.write(env.get_template(f'{p}.j2').render(**ctx))
+
 
 if __name__ == "__main__":
     main()
