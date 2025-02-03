@@ -1,26 +1,28 @@
-head: {
-  title: orlov blog,
-  favicon_emoji: "🗿",
-}
+head:
+  title: "orlov blog"
+  favicon_emoji: "🗿"
+  description: "Software and math blog."
 
-posts: [
-  {
-    title: "SWE: Golden tests",
-    src: "posts/golden_tests.md",
-    url: "golden_tests.html",
-    date: "2025-02-01",
-  },
-  {
-    title: "TFHE: guide walkthrough. Part 1", 
-    src: "posts/tfhe_p1.ipynb", 
-    url: "tfhe_p1.html",
-    date: "2023-08-15",
-  },
-  {
-    title: "RL: solving cartpole", 
-    src: "posts/cartpole_exercise.ipynb", 
-    url: "cartpole.html",
-    date: "2018-06-18",
-  },
-]
-
+posts:
+  - title: "SWE: Golden tests"
+    src: "posts/golden_tests.md"
+    url: "golden_tests.html"
+    date: "2025-02-01"
+    description: |
+      Golden tests compare the current output of your code against a pre-saved "golden" output.
+      This post describes simple implentation of golden tests in Python.
+  
+  - title: "TFHE: guide walkthrough. Part 1"
+    src: "posts/tfhe_p1.ipynb"
+    url: "tfhe_p1.html"
+    date: "2023-08-15"
+    description: |
+      Part 1. Walkthrough of <a href="https://eprint.iacr.org/2021/1402">Guide to Fully Homomorphic Encryption over the [Discretized] Torus</a> by Marc Joye.
+    
+  - title: "RL: solving cartpole"
+    src: "posts/cartpole_exercise.ipynb"
+    url: "cartpole.html"
+    date: "2018-06-18"
+    description: |
+      Solving <a href="https://openai.com/requests-for-research/#cartpole">OpenAI. Requests for Research. Cartpole: for newcomers to RL</a> using NumPy.
+  
