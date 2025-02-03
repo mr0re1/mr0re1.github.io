@@ -1,5 +1,3 @@
-# Golden tests. Python example.
-
 At their core, golden tests compare the current output of your code against a pre-saved "golden" output. If the current output matches the golden output, the test passes. If they differ, the test fails, signaling a potential issue.
 
 To illustrate the usefulness of golden tests, let's take the example of [bla](https://github.com/mr0re1/bla) - a small Python library for performing code analysis.

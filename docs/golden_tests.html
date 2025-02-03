@@ -3,9 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Golden tests compare the current output of your code against a pre-saved "golden" output.
-This post describes simple implentation of golden tests in Python.
-">
+    <meta name="description" content="Golden tests compare the current output of your code against a pre-saved "golden" output. This post describes simple implentation of golden tests in Python.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗿</text></svg>">
     <title>orlov blog</title>
 
@@ -161,7 +159,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     <!-- End of mathjax configuration --></head>
 <div  class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Golden-tests.-Python-example.">Golden tests. Python example.<a class="anchor-link" href="#Golden-tests.-Python-example.">&#182;</a></h1><p>At their core, golden tests compare the current output of your code against a pre-saved &quot;golden&quot; output. If the current output matches the golden output, the test passes. If they differ, the test fails, signaling a potential issue.</p>
+<p>At their core, golden tests compare the current output of your code against a pre-saved &quot;golden&quot; output. If the current output matches the golden output, the test passes. If they differ, the test fails, signaling a potential issue.</p>
 <p>To illustrate the usefulness of golden tests, let's take the example of <a href="https://github.com/mr0re1/bla">bla</a> - a small Python library for performing code analysis.
 Its repository has a folder <a href="https://github.com/mr0re1/bla/tree/main/examples">examples</a> containing sample scripts showcasing its functionality.</p>
 <p>One way to ensure that example scripts are not broken by code changes is to run them manually, the better way would be to automate it by adding &quot;golden tests&quot;.</p>
