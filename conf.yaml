@@ -16,5 +16,11 @@ posts: [
     url: "cartpole.html",
     date: "2018-06-18",
   },
+  {
+    title: "SWE: Golden tests",
+    src: "posts/golden_tests.md",
+    url: "golden_tests.html",
+    date: "2025-02-01",
+  }
 ]
 
