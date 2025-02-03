@@ -5,6 +5,12 @@ head: {
 
 posts: [
   {
+    title: "SWE: Golden tests",
+    src: "posts/golden_tests.md",
+    url: "golden_tests.html",
+    date: "2025-02-01",
+  },
+  {
     title: "TFHE: guide walkthrough. Part 1", 
     src: "posts/tfhe_p1.ipynb", 
     url: "tfhe_p1.html",
@@ -16,11 +22,5 @@ posts: [
     url: "cartpole.html",
     date: "2018-06-18",
   },
-  {
-    title: "SWE: Golden tests",
-    src: "posts/golden_tests.md",
-    url: "golden_tests.html",
-    date: "2025-02-01",
-  }
 ]
 
